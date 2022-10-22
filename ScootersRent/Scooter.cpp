@@ -28,3 +28,16 @@ int Scooter::getId() {
 void Scooter::setId(int id) {
 	this->id = id;
 }
+//rm after complete
+int Scooter::getPrice() {
+	return this->price;
+}
+
+bool Scooter::operator>(Scooter next) {
+	if (this->price > next.price) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
