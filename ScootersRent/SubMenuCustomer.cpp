@@ -12,6 +12,7 @@ SubMenuCustomer::SubMenuCustomer(Store* store, User* user) {
 //}
 void SubMenuCustomer::show() {
 	int userChoice;
+	int userSubChoice;
 
 	do {
 		cout << "Select operation(customer) \n\n";
@@ -27,8 +28,25 @@ void SubMenuCustomer::show() {
 
 		switch (userChoice) {
 		case 1:
-			this->showScooters();
-			break;
+			do {
+				cout << "\n1.Show Scooters\n";
+				cout << "2.Show Best Scooters\n";
+				cout << "0.Previous menu\n";
+				cin >> userSubChoice;
+				switch (userSubChoice) {
+				case 1:
+					this->showScooters();
+					break;
+				case 2:
+					this->showBestScooters();
+					break;
+
+					break;
+				default:
+					break;
+				}
+			} while (userSubChoice != 0);
+		break;
 		case 2:
 			this->createReqest();
 			break;
@@ -69,8 +87,9 @@ void SubMenuCustomer::showScooters(User* user) {
 	this->store->showScooters();
 }
 
-
-
+void SubMenuCustomer::showBestScooters() {
+	this->store->showScooters();
+}
 
 //Requests
 void SubMenuCustomer::createReqest() {
