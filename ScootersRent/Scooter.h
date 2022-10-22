@@ -19,6 +19,6 @@ public:
 	void setId(int id);
 	int getPrice();
 
-	//bool operator>(Scooter next);
+	bool operator>(Scooter next);
 };
 

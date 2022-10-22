@@ -33,6 +33,11 @@ int Scooter::getPrice() {
 	return this->price;
 }
 
-//bool Scooter::operator>(Scooter next) {
-//	return true;
-//}
+bool Scooter::operator>(Scooter next) {
+	if (this->price > next.price) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}

@@ -269,9 +269,9 @@ vector<Scooter> Store::bubbleSortingByPrice(vector<Scooter> scooters) {
 		{
 			Scooter prev = result[i];
 			Scooter next = result[j];
-			if (prev.getPrice() > next.getPrice())
+			//if (prev.getPrice() > next.getPrice())
 			//bool z = prev > next;
-			//if (prev > next)
+			if (prev > next)
 			{
 				//swap(result[i], result[j]);
 				result[i] = next;
