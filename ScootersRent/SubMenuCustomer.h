@@ -10,6 +10,7 @@ public:
 	//SubMenuCustomer();
 	void showScooters();
 	void showScooters(User* user);
+	void showBestScooters();
 	void createReqest();
 	void deleteReqest();
 	void showReqests();
