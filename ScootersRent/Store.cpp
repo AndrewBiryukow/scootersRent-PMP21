@@ -133,11 +133,34 @@ void Store::deleteScooterById(int id) {
 	}
 }
 
-void Store::showScooters() {
+void Store::showScooters(Sorts sort) {
 	cout << "\n\tScooters List \n";
-	for (int i = 0; i < this->scooters.size(); i++) {
-		this->scooters[i].toString();
+	vector<Scooter> scooters;
+	switch (sort)
+	{
+	//case Sorts::SORT_DEFAULT:
+	//	break;
+	case Sorts::SORT_PRICE:
+		scooters =	this->bubbleSortingByPrice(this->scooters);
+		break;
+	//case Sorts::SORT_CAPACITY:
+	//	break;
+	//case Sorts::SORT_SPEED:
+	//	break;
+	//case Sorts::SORT_YEAR:
+		break;
+	default:
+		scooters = this->scooters;
+
+		break;
 	}
+
+
+	for (int i = 0; i < scooters.size(); i++) {
+		scooters[i].toString();
+	}
+
+
 	cout << "\n\n";
 }
 
@@ -230,3 +253,46 @@ void Store::changeStatusRequest(int id, int status) {
 		cout << "\n\tRequest not found \n\n";
 	}
 }
+
+vector<Scooter> Store::bubbleSortingByPrice(vector<Scooter> scooters) {
+	vector<Scooter> result ;
+	for (int i = 0; i < scooters.size(); i++)
+	{
+		result.push_back(scooters[i]);
+
+	}
+
+
+	for (int i = 0; i < result.size()-1; i++)
+	{
+		for (int j = i+1; j < result.size() ; j++)
+		{
+			Scooter prev = result[i];
+			Scooter next = result[j];
+			if (prev.getPrice() > next.getPrice())
+			//bool z = prev > next;
+			//if (prev > next)
+			{
+				//swap(result[i], result[j]);
+				result[i] = next;
+				result[j] = prev;
+ 			} 
+
+		}
+	}
+	//result = scooters;
+
+	return result;
+}
+
+
+// void bubbleSort(int arr[], int n)
+//{
+//	int i, j;
+//	for (i = 0; i < n - 1; i++)
+
+		// Last i elements are already in place
+		//for (j = 0; j < n - i - 1; j++)
+		//	if (arr[j] > arr[j + 1])
+			//	swap(&arr[j], &arr[j + 1]);
+//}

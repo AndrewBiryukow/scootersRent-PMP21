@@ -88,7 +88,8 @@ void SubMenuCustomer::showScooters(User* user) {
 }
 
 void SubMenuCustomer::showBestScooters() {
-	this->store->showScooters();
+	Sorts sort = Sorts::SORT_PRICE;
+	this->store->showScooters(sort);
 }
 
 //Requests

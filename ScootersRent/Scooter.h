@@ -17,5 +17,8 @@ public:
 	string getStringToDB();
 	int getId();
 	void setId(int id);
+	int getPrice();
+
+	//bool operator>(Scooter next);
 };
 

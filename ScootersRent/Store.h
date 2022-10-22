@@ -3,6 +3,7 @@
 #include <vector>
 #include "Scooter.h"
 #include "Request.h"
+#include "Sorts.h"
 
 class Store
 {
@@ -23,7 +24,7 @@ public:
 	void addScooter(Scooter scooter);
 	void deleteScooterById(int id);
 	Scooter* getScooterById(int id);
-	void showScooters();
+	void showScooters(Sorts sort = Sorts());
 
 	void addRequest(Request user);
 	void deleteRequestById(int id);
@@ -32,7 +33,7 @@ public:
 	void showRequests();
 	void showRequests(User* user);
 	void changeStatusRequest(int id,int status);
-	
+	vector<Scooter> bubbleSortingByPrice(vector<Scooter> scooters);
 	
 	//User* getUserByEmail(string email);
 
