@@ -3,3 +3,5 @@ x64
 ScootersRent/x64
 ScootersRent/*.vcxproj
 ScootersRent/*.filters
+ScootersRent.vcxproj
+ScootersRent.vcxproj*
