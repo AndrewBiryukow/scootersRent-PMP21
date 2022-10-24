@@ -111,7 +111,6 @@ void SubMenuCustomer::createReqest() {
 	Request request = Request(idUser, idScooter,STATUS_NEW);
 	this->store->addRequest(request);
 }
-
 void SubMenuCustomer::deleteReqest() {
 	int id;
 	cout << "Input request's id for delete: ";
