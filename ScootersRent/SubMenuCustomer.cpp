@@ -103,12 +103,20 @@ void SubMenuCustomer::createReqest() {
 		cout << "Enter  id  of scooter:" << endl;
 		cin >> idScooter;
 		Scooter* scooter  = this->store->getScooterById(idScooter);
+		// todo equal_with_request
+
 		if (scooter == NULL) {
 			cout << "\tScooter not found\n" << endl;
 			return;
 		}
-
 	Request request = Request(idUser, idScooter,STATUS_NEW);
+	for (int i = 0; i < this->store->getRequests().size(); i++)
+	{
+		if (request == this->store->getRequests()[i]) {
+			cout << "This scooter is already busy" << endl;
+			return;
+		}
+	}
 	this->store->addRequest(request);
 }
 void SubMenuCustomer::deleteReqest() {
