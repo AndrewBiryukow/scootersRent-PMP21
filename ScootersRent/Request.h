@@ -23,7 +23,7 @@ public:
 	int getIdScooter();
 
 	bool operator==(Request request);
-
+	bool operator!=(Request request);
 
 
 };

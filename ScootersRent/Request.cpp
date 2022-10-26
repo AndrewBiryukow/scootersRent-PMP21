@@ -61,3 +61,14 @@ bool Request::operator==(Request request) {
 		return false;
 	}
 }
+
+
+bool Request::operator!=(Request request) {
+	if (this->idScooter != request.getIdScooter())
+	{
+		return true;
+	}
+	else {
+		return false;
+	}
+}
