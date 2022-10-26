@@ -112,10 +112,12 @@ void SubMenuCustomer::createReqest() {
 	Request request = Request(idUser, idScooter,STATUS_NEW);
 	for (int i = 0; i < this->store->getRequests().size(); i++)
 	{
+		// it's working block operator!= overload 
 		/*if (request == this->store->getRequests()[i]) {
 			cout << "This scooter is already busy" << endl;
 			return;
 		}*/
+		// it's working block operator== overload 
 		if ( !(request != this->store->getRequests()[i]) ) {
 			cout << "This scooter is already busy" << endl;
 			return;
