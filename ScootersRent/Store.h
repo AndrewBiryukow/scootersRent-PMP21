@@ -31,6 +31,7 @@ public:
 	void deleteRequestById(int id, User* user);
 	Request* getRequestById(int id);
 	void showRequests();
+	vector<Request> getRequests();
 	void showRequests(User* user);
 	void changeStatusRequest(int id,int status);
 	vector<Scooter> bubbleSortingByPrice(vector<Scooter> scooters);

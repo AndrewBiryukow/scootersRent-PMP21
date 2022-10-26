@@ -240,6 +240,10 @@ void Store::showRequests(User* user) {
 	cout << "\n\n";
 }
 
+vector<Request> Store::getRequests() {
+	return this->requests;
+}
+
 void Store::changeStatusRequest(int id, int status) {
 
 	Request* request = this->getRequestById(id);

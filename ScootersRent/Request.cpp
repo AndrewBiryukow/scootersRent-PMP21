@@ -41,9 +41,23 @@ int Request::getId() {
 	return this->id;
 }
 
+int Request::getIdScooter() {
+	return this->idScooter;
+}
+
 void Request::setId(int id) {
 	this->id = id;
 }
 void Request::setStatus(int status) {
 	this->status = status;
+}
+
+bool Request::operator==(Request request) {
+	if (this->idScooter == request.getIdScooter())
+	{
+		return true;
+	}
+	else {
+		return false;
+	}
 }

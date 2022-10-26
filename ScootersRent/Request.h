@@ -20,6 +20,9 @@ public:
 	int getUserId();
 	void setId(int id);
 	void setStatus(int status);
+	int getIdScooter();
+
+	bool operator==(Request request);
 
 
 
