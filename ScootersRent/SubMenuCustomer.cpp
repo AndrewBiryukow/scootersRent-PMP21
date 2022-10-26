@@ -112,7 +112,11 @@ void SubMenuCustomer::createReqest() {
 	Request request = Request(idUser, idScooter,STATUS_NEW);
 	for (int i = 0; i < this->store->getRequests().size(); i++)
 	{
-		if (request == this->store->getRequests()[i]) {
+		/*if (request == this->store->getRequests()[i]) {
+			cout << "This scooter is already busy" << endl;
+			return;
+		}*/
+		if ( !(request != this->store->getRequests()[i]) ) {
 			cout << "This scooter is already busy" << endl;
 			return;
 		}
