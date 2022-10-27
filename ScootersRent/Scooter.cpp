@@ -1,5 +1,6 @@
 #include "Scooter.h"
-
+#include "Helper.h"
+#include <iostream>
 Scooter::Scooter(string model, string year, int batteryCap, int speed, int price) {
 	this->model = model;
 	this->year = year;
@@ -29,11 +30,14 @@ int Scooter::getId() {
 void Scooter::setId(int id) {
 	this->id = id;
 }
-//rm after complete
-//int Scooter::getPrice() {
-//	return this->price;
-//}
+void Scooter::setPrice(int price) {
+	this->price = price;
+}
 
+
+
+
+// overloaded
 bool Scooter::operator>(Scooter next) {
 	double ratioCurrent = ((double)this->speed / (double)this->price) + ((double)this->batteryCap / (double)this->price);
 	double ratioNext = ((double)next.speed / (double)next.price) + ((double)next.batteryCap / (double)next.price);
@@ -54,3 +58,16 @@ bool Scooter::operator<(Scooter next) {
 		return false;
 	}
 }
+
+void Scooter::operator+=(int percent) {
+	(*this).price=Helper::addCalculatedValuePercent((*this).price, percent);
+	(*this).speed =Helper::addCalculatedValuePercent((*this).speed, percent);
+	(*this).batteryCap =Helper::addCalculatedValuePercent((*this).batteryCap, percent);
+}
+
+void Scooter::operator-=(int percent) {
+	(*this).price = Helper::minusCalculatedValuePercent((*this).price, percent);
+	(*this).speed = Helper::minusCalculatedValuePercent((*this).speed, percent);
+	(*this).batteryCap = Helper::minusCalculatedValuePercent((*this).batteryCap, percent);
+}
+

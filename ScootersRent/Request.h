@@ -21,7 +21,7 @@ public:
 	void setId(int id);
 	void setStatus(int status);
 	int getIdScooter();
-
+	// overloaded
 	bool operator==(Request request);
 	bool operator!=(Request request);
 

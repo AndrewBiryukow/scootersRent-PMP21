@@ -25,6 +25,7 @@ public:
 	void deleteScooterById(int id);
 	Scooter* getScooterById(int id);
 	void showScooters(Sorts sort = Sorts());
+	void updateScooter(Scooter scooter);
 
 	void addRequest(Request user);
 	void deleteRequestById(int id);
@@ -36,7 +37,6 @@ public:
 	void changeStatusRequest(int id,int status);
 	vector<Scooter> bubbleSortingByPrice(vector<Scooter> scooters);
 	
-	//User* getUserByEmail(string email);
 
 	
 };

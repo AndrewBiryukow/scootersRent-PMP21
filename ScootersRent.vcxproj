@@ -103,6 +103,7 @@
     <ClCompile Include="scootersrent\Administrator.cpp" />
     <ClCompile Include="scootersrent\Customer.cpp" />
     <ClCompile Include="scootersrent\File.cpp" />
+    <ClCompile Include="ScootersRent\Helper.cpp" />
     <ClCompile Include="scootersrent\Menu.cpp" />
     <ClCompile Include="scootersrent\Request.cpp" />
     <ClCompile Include="scootersrent\Scooter.cpp" />
@@ -117,6 +118,7 @@
     <ClInclude Include="scootersrent\Administrator.h" />
     <ClInclude Include="scootersrent\Customer.h" />
     <ClInclude Include="scootersrent\File.h" />
+    <ClInclude Include="ScootersRent\Helper.h" />
     <ClInclude Include="scootersrent\Menu.h" />
     <ClInclude Include="scootersrent\Request.h" />
     <ClInclude Include="scootersrent\Scooter.h" />

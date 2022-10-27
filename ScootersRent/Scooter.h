@@ -17,9 +17,12 @@ public:
 	string getStringToDB();
 	int getId();
 	void setId(int id);
-	//int getPrice();
 
+	void setPrice(int price);
+	// overloaded
 	bool operator>(Scooter next);
 	bool operator<(Scooter next);
-};
+	void operator+=(int percent);
+	void operator-=(int percent);
 
+};
