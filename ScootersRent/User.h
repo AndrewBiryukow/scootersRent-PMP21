@@ -16,7 +16,6 @@ private:
 public:
 	User(string name, string email,int levelAccess);
 	User(string name, string email,int levelAccess,int id);
-	//void scooters();
 	void toString();
 	string getStringToDB();
 	int getId();

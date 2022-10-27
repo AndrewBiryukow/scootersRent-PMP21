@@ -3,6 +3,7 @@
 #include "Customer.h"
 #include "Store.h"
 #include "Scooter.h"
+#include <cstdlib>
 
 using namespace std;
 
@@ -24,10 +25,11 @@ void SubMenuAdministrator::show() {
 			
 			cout << "4.Create Scooter\n";
 			cout << "5.Delete Scooter\n";
-			cout << "6.Show Scooters\n\n";
+			cout << "6.Show Scooters\n";
+			cout << "7.Update Scooter\n\n";
 			
-			cout << "7.Show Requests\n";
-			cout << "8.Edit Request\n\n";
+			cout << "8.Show Requests\n";
+			cout << "9.Edit Request\n\n";
 
 			cout << "0.Previous menu\n";
 
@@ -53,12 +55,14 @@ void SubMenuAdministrator::show() {
 				this->showScooters();
 				break;
 			case 7:
-				this->showRequests();
+				this->updateScooter();
 				break;
 			case 8:
+				this->showRequests();
+				break;
+			case 9:
 				this->editRequest();
 				break;
-
 
 				
 			default:
@@ -133,6 +137,36 @@ void SubMenuAdministrator::showScooters() {
 	this->store->showScooters();
 }
 
+void SubMenuAdministrator::updateScooter() {
+	this->showScooters();
+	int id;
+	cout << "Input scooter's id for editing: \n";
+	cin >> id;
+	//todo add check if exist	
+	Scooter scooter(*this->store->getScooterById(id));
+	scooter.toString();
+
+
+	cout << "Change of specifications(decrease/increase in %): ";
+	int percent;
+	cin >> percent;
+	if (percent == 0) {
+		cout << "The percant can not be 0.\n\n";
+		return;
+	}
+	if (percent > 0) {
+		scooter +=percent;
+	}
+	else {
+		scooter -= abs( percent);
+	}
+	scooter.toString();
+	//update store
+	this->store->updateScooter(scooter);
+
+
+
+}
 
 void SubMenuAdministrator::showRequests() {
 	this->store->showRequests();

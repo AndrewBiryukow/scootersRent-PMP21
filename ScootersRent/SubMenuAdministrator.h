@@ -21,6 +21,7 @@ public:
 	void createScooter();
 	void deleteScooter();
 	void showScooters();
+	void updateScooter();
 
 
 	//void updateScooter();

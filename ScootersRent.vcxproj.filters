@@ -51,6 +51,9 @@
     <ClCompile Include="scootersrent\User.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ScootersRent\Helper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="scootersrent\Administrator.h">
@@ -84,6 +87,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="scootersrent\User.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScootersRent\Helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

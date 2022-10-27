@@ -7,9 +7,7 @@ SubMenuCustomer::SubMenuCustomer(Store* store, User* user) {
 	this->store = store;
 	this->user = user;
 }
-//SubMenuCustomer::SubMenuCustomer() {
-//
-//}
+
 void SubMenuCustomer::show() {
 	int userChoice;
 	int userSubChoice;

@@ -52,6 +52,7 @@ void Request::setStatus(int status) {
 	this->status = status;
 }
 
+// overloaded
 bool Request::operator==(Request request) {
 	if (this->idScooter == request.getIdScooter())
 	{
